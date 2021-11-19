@@ -1,13 +1,31 @@
-<h1><%=@article.title%></h1>
-<p><%=@article.body%></p>
-
-<%= link_to "Edit article", edit_article_path(@article)%>
-<%= link_to "Delete article", article_path(@article),method: :delete, data: {confirm: "Are you sure?"} %>
+<%= render "head"%>
 
 
-<h2> Comments</h2>
-<%= render @article.comments %>
+<div class="articleShow">
+    <div class="articleHead">
+        <h1><%=@article.title%></h1>
+        <div class="articleButtons">
+            <%= link_to "Edit article", edit_article_path(@article), class:"articleEdit"%>
+            <%= link_to "Delete article", article_path(@article),method: :delete, data: {confirm: "Are you sure?"} , class:"articleDelete"%>
+        </div>
+    </div>
+    
+    <div class="articleBody">
+        <p><%=@article.body%></p>
+    </div>
+    
 
+    <div class="articleComments">
+        <%# render @article.comments %>
+        <% check=render partial: @article.comments%>
+        <% if check.present? %>
+        <h2> Comments</h2>
+        <%= check %>
+        <% end %>
+    </div>
 
-<h2>Add a comment</h2>
-<%= render 'comments/form' %>
+    <h2>Add a comment</h2>
+    <div class="articleAddComment">
+        <%= render 'comments/form' %>
+    </div>
+</div>

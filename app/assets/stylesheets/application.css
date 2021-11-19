@@ -13,3 +13,181 @@
  *= require_tree .
  *= require_self
  */
+
+ *{
+    font-family: Helvetica Neue,Arial;
+ }
+html{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    background-color: rgb(240, 240, 240);
+    width: 100vw;
+}
+
+body{
+    margin: 0;
+}
+.main{
+    padding: 0 500px 0;
+}
+.headings{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.headings p{
+    font-size: 25px;
+}
+.headings h1, .headings p{
+    text-align: center;
+    margin:0;
+}
+
+.content{
+    padding:20px;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-auto-rows: 150px;
+    grid-gap: 20px;
+}
+
+.addButton{
+    width: 120px;
+    height:30px;
+    background-color: #0069d9;
+    text-align: center;
+    border-radius: 5px;
+}
+.addButton a{
+    line-height: 30px;
+    color:white;
+    text-decoration: none;
+}
+
+.grid-box{
+    background-color: white;
+    border-bottom: 1px solid #dee2e6;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 150px;
+    overflow: hidden;
+
+}
+.grid-item{
+    text-decoration: none;
+    color:grey;
+}
+
+
+
+
+.headBox{
+    display: flex;
+    height: 50px;
+    width:100vw;
+    background-color: white;
+    border-bottom: 1px solid #dee2e6;
+    padding-left: 300px;
+    align-items: center;
+    color:black;
+    font-size: 20px;
+}
+.headBox h1{
+    margin-right: 20px;
+}
+.headBox a{
+    text-decoration: none;
+    color:grey;
+}
+
+
+
+
+
+
+.articleShow{
+    padding: 40px 500px 0;
+}
+
+.articleShow .articleHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.articleShow .articleHead .articleButtons{
+}
+.articleShow .articleHead .articleButtons .articleEdit,.articleDelete{
+    display: inline-block;
+    width: 120px;
+    height:30px;
+    background-color: #0069d9;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.articleShow .articleHead .articleButtons *{
+    line-height: 30px;
+    color:white;
+    text-decoration: none;
+}
+
+.articleShow .articleBody p{
+    color:rgb(126, 126, 126);
+    text-align: start;
+}
+
+.articleShow .articleComments{
+    text-align: start;
+}
+
+.articleShow .articleComments .comment .commentText{
+    display: flex;
+    margin:0px;
+}
+
+.articleShow .articleComments .comment p{
+    margin:0px;
+}
+
+.articleShow .articleComments .comment .commentDelete{
+    display: inline-block;
+    width: 120px;
+    height:30px;
+    background-color: #0069d9;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 30px;
+    color:white;
+    text-decoration: none;
+
+}
+
+.articleShow .articleAddComment{
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding:20px;
+}
+
+.articleShow .articleAddComment .commentAddSubmit{
+    display: inline-block;
+    width: 120px;
+    height:30px;
+    background-color: #0069d9;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 30px;
+    color:white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.articleEditForm{
+    padding: 0 300px 0;
+}
